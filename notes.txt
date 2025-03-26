@@ -1,0 +1,34 @@
+[...list]: The spread operator (...) is used to copy all the elements from the existing list into a new array. This ensures that you're not mutating the original list directly, which is important in React to maintain state immutability.
+
+So can we use only to do an update its value directly?
+Ans-
+
+No, you can't update the `todo` state directly, because React states should always be updated **immutably**. This means that instead of modifying the existing state, you create a **new copy** of the state with the updated values. React relies on the idea that you don’t modify the previous state directly but rather use the state updater function to set the new state.
+
+For example, if you tried to do this:
+
+
+todo = "New Task";
+
+It wouldn’t work as expected because `todo` is a **state variable** managed by React, and directly modifying it bypasses React's reactivity and renders.
+
+### Why can’t we update it directly?
+- **Immutability**: React needs to know when a state has changed to trigger a re-render. Directly changing the value doesn’t allow React to detect the change properly.
+- **State consistency**: Directly modifying state can lead to bugs and unpredictable behavior in your app.
+
+### Correct way to update:
+You always use the **state updater function** to modify state. For example:
+
+javascript
+setTodo("New Task");
+
+This ensures that React can track the change and update the component efficiently.
+
+---
+
+So, while you **cannot update `todo` directly** (like `todo = "New Task"`), you can use the `setTodo()` function to properly update the state:
+
+javascript
+setTodo("New Task");  // Correct way
+
+This triggers React’s reactivity and updates the `todo` value, causing the component to re-render with the new state.
