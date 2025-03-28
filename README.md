@@ -1,1 +1,1 @@
-trying to make a basic todo app for practicing React.js 
+trying to make a basic todo app i.e responsive for practicing React.js 
