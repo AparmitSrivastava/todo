@@ -109,7 +109,7 @@ function App() {
                   </button>
                   <button
                     onClick={() => handleDelete(item.id)}
-                    className='bg-violet-900 rounded-md px-2 py-1 mx-1 text-white text-sm font-bold'>
+                    className='bg-violet-900 rounded-md px-2 py-1  mx-1 text-white text-sm font-bold'>
                     <AiFillDelete />
                   </button>
                 </div>
